@@ -1,0 +1,65 @@
+:root {
+  --app-bg: url("./assets/bg-light.png");
+  --text: #0b0f14;
+  --card: rgba(255, 255, 255, 0.78);
+  --card-border: rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-bg: url("./assets/bg-dark.png");
+    --text: #f2f6ff;
+    --card: rgba(10, 14, 22, 0.62);
+    --card-border: rgba(255, 255, 255, 0.10);
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+
+  background-image: var(--app-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.app {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.card {
+  max-width: 560px;
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+}
+
+.hint {
+  opacity: 0.85;
+  font-size: 14px;
+}
